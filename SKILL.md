@@ -1,5 +1,9 @@
 ---
 name: tensorlake
+license: MIT
+metadata:
+  author: tensorlake
+  version: 1.0.0
 description: >
   Build agentic workflow applications and sandboxed execution environments using the TensorLake SDK.
   Use when the user asks to build a TensorLake app, create an agentic workflow with tensorlake,
@@ -22,6 +26,16 @@ Three APIs: **Applications** (serverless workflow DAGs), **Sandbox** (isolated c
 
 **For documentation questions**: Read the relevant reference file below to answer. If the bundled references don't cover it, fetch `https://docs.tensorlake.ai/llms.txt` for the latest docs.
 **For building**: Use the Quick Start and Core Patterns below, plus reference files for API details.
+
+## Setup
+
+TensorLake requires a `TENSORLAKE_API_KEY` environment variable. Before writing any TensorLake code, verify the key is set by running `echo $TENSORLAKE_API_KEY`. If not set, ask the user to provide their API key and guide them to set it:
+
+```bash
+export TENSORLAKE_API_KEY="your-api-key-here"
+```
+
+Get an API key at https://console.tensorlake.ai. Run `tensorlake login` as an alternative to set it interactively. For deployed applications, use the `secrets` parameter in `@function()` to pass the key securely.
 
 ## Quick Start — Agentic Workflow Application
 
