@@ -37,24 +37,6 @@ npx skills add tensorlakeai/tensorlake-skills
 
 Works with Claude Code, Cursor, Cline, GitHub Copilot, Windsurf, and more via [skills.sh](https://skills.sh).
 
-### Claude Code
-
-```bash
-claude install-skill https://github.com/tensorlakeai/tensorlake-skills
-```
-
-### Google ADK
-
-```python
-from google.adk.skills import load_skill_from_dir
-
-tensorlake_skill = load_skill_from_dir("path/to/tensorlake-skills")
-```
-
-### OpenAI Codex
-
-Clone the repo into your project or reference it in your Codex configuration. Codex reads the `AGENTS.md` file automatically.
-
 ## Setup
 
 TensorLake requires an API key. Get one at [console.tensorlake.ai](https://console.tensorlake.ai), then set it as an environment variable:
