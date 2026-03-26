@@ -17,7 +17,7 @@ metadata:
 
 # TensorLake SDK
 
-Three APIs: **Applications** (serverless workflow DAGs), **Sandbox** (isolated code execution), **DocumentAI** (document parsing/extraction). Use standalone or as infrastructure alongside any LLM, agent framework, database, or API.
+Three APIs: **Orchestrate** (serverless workflow DAGs — imported as `tensorlake.applications`), **Sandbox** (isolated code execution), **DocumentAI** (document parsing/extraction). Use standalone or as infrastructure alongside any LLM, agent framework, database, or API.
 
 **For documentation questions**: Read the relevant reference file below to answer. If the bundled references don't cover it, direct the user to the TensorLake docs site.
 **For building**: Use the Quick Start and Core Patterns below, plus reference files for API details.
@@ -26,7 +26,7 @@ Three APIs: **Applications** (serverless workflow DAGs), **Sandbox** (isolated c
 
 TensorLake requires the `TENSORLAKE_API_KEY` environment variable to be configured before running TensorLake code. If it is missing, direct the user to run `tensorlake login` or to configure the key through their local environment (for example a shell profile, `.env` file, or secret manager). Do **not** ask the user to paste the key into the conversation, include it in generated code, or print it in terminal output. Get an API key at [console.tensorlake.ai](https://console.tensorlake.ai). For deployed applications, use the `secrets` parameter in `@function()` to pass keys securely.
 
-## Quick Start — Agentic Workflow Application
+## Quick Start — Orchestrate Workflow
 
 ```python
 from tensorlake.applications import (
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 ## Core Patterns
 
 - **DAG composition**: Chain functions via `.future()`, `.map()`, `.reduce()` to form parallel pipelines
-- **Agentic + Sandbox**: Use Applications to orchestrate, Sandbox to execute LLM-generated code safely
+- **Agentic + Sandbox**: Use Orchestrate for workflow coordination, Sandbox to execute LLM-generated code safely
 - **Document extraction**: Use DocumentAI with Pydantic schemas to extract structured data from PDFs/images
 - **LLM integration**: Use any LLM provider inside `@function()` — install deps via `Image`, pass keys via `secrets`
 - **Framework integration**: Use Sandbox as a code execution tool for LangChain/CrewAI/LlamaIndex agents, or DocumentAI as a document loader for any RAG pipeline
@@ -88,7 +88,7 @@ For integration examples (LangChain, CrewAI, OpenAI function calling, multi-agen
 
 Bundled references (use when building with TensorLake):
 
-- **Applications SDK** (decorators, futures, map/reduce, images, context): See [references/applications_sdk.md](references/applications_sdk.md)
+- **Orchestrate SDK** (decorators, futures, map/reduce, images, context): See [references/applications_sdk.md](references/applications_sdk.md)
 - **Sandbox SDK** (create, run commands, file ops, snapshots, pools): See [references/sandbox_sdk.md](references/sandbox_sdk.md)
 - **DocumentAI SDK** (parse, extract, classify, options): See [references/documentai_sdk.md](references/documentai_sdk.md)
 - **Integrations** (LangChain, CrewAI, OpenAI tools, RAG pipelines): See [references/integrations.md](references/integrations.md)
