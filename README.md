@@ -7,6 +7,7 @@ This skill helps coding agents use TensorLake to build real agent systems with o
 Instead of treating TensorLake as just another API, this skill teaches agents how to use TensorLake as infrastructure: coordinate workflows with the Orchestrate SDK, run tasks in isolated environments with the Sandbox SDK, and compose reliable agent systems for production use.
 
 Use it when you want your coding agent to build:
+
 - multi-agent applications
 - sandboxed coding or execution workflows
 - agent teams with separate workspaces
@@ -32,6 +33,7 @@ The skill is especially useful for tasks like:
 Works with any LLM provider (OpenAI, Anthropic) and any agent framework (LangChain, CrewAI, LlamaIndex). TensorLake is the infrastructure layer — bring your own models and frameworks.
 
 The skill triggers automatically when you ask the agent to:
+
 - Build agentic workflows or multi-agent pipelines
 - Run LLM-generated code in a secure sandbox
 - Orchestrate complex multi-step AI applications
@@ -40,15 +42,25 @@ The skill triggers automatically when you ask the agent to:
 
 ## Supported Agents
 
-| Agent | File | How to Install |
-|-------|------|----------------|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | `SKILL.md` | See [Claude Code installation](#claude-code) |
-| [Google ADK](https://google.github.io/adk-docs/skills/) | `SKILL.md` | See [Google ADK installation](#google-adk) |
-| [OpenAI Codex](https://openai.com/index/codex/) | `AGENTS.md` | See [Codex installation](#openai-codex) |
+
+| Agent                                                         | File        | How to Install                               |
+| ------------------------------------------------------------- | ----------- | -------------------------------------------- |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | `SKILL.md`  | See [Claude Code installation](#claude-code) |
+| [Google ADK](https://google.github.io/adk-docs/skills/)       | `SKILL.md`  | See [Google ADK installation](#google-adk)   |
+| [OpenAI Codex](https://openai.com/index/codex/)               | `AGENTS.md` | See [Codex installation](#openai-codex)      |
+
 
 ## Installation
 
-### Quick Install (Any Agent)
+### Quick Install
+
+#### Claude code
+
+```bash
+claude install-skill https://github.com/tensorlakeai/tensorlake-skills
+```
+
+#### Any Agent
 
 ```bash
 npx skills add tensorlakeai/tensorlake-skills
