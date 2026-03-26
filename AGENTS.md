@@ -2,7 +2,7 @@
 
 TensorLake provides three APIs for building agentic applications:
 
-- **Applications** — Serverless workflow DAGs with parallel map/reduce, auto-scaling, and crash recovery
+- **Orchestrate** — Serverless workflow DAGs with parallel map/reduce, auto-scaling, and crash recovery (imported as `tensorlake.applications`)
 - **Sandbox** — Isolated code execution environments for running LLM-generated code safely
 - **DocumentAI** — Document parsing, structured data extraction, and OCR from PDFs/images
 
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 ## Core Patterns
 
 - **DAG composition**: Chain functions via `.future()`, `.map()`, `.reduce()` to form parallel pipelines
-- **Agentic + Sandbox**: Use Applications to orchestrate, Sandbox to execute LLM-generated code safely
+- **Agentic + Sandbox**: Use Orchestrate for workflow coordination, Sandbox to execute LLM-generated code safely
 - **Document extraction**: Use DocumentAI with Pydantic schemas to extract structured data from PDFs/images
 - **LLM integration**: Use any LLM provider inside `@function()` — install deps via `Image`, pass keys via `secrets`
 - **Framework integration**: Use Sandbox as a code execution tool for LangChain/CrewAI/LlamaIndex agents, or DocumentAI as a document loader for any RAG pipeline
@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
 Detailed API docs are in the `references/` directory:
 
-- `references/applications_sdk.md` — Decorators, futures, map/reduce, images, context
+- `references/applications_sdk.md` — Orchestrate SDK: decorators, futures, map/reduce, images, context
 - `references/sandbox_sdk.md` — Create sandboxes, run commands, file ops, snapshots, pools
 - `references/documentai_sdk.md` — Parse, extract, classify, options
 - `references/integrations.md` — LangChain, CrewAI, OpenAI tools, RAG pipeline patterns

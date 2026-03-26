@@ -4,7 +4,7 @@ Build production agent workflows with [TensorLake's](https://tensorlake.ai).
 
 This skill helps coding agents use TensorLake to build real agent systems with orchestration and sandboxed execution. It is designed for modern agent use cases like multi-agent applications, isolated code execution, long-running workflows, and tool-using agents that need a real workspace.
 
-Instead of treating TensorLake as just another API, this skill teaches agents how to use TensorLake as infrastructure: coordinate workflows with the Applications SDK, run tasks in isolated environments with the Sandbox SDK, and compose reliable agent systems for production use.
+Instead of treating TensorLake as just another API, this skill teaches agents how to use TensorLake as infrastructure: coordinate workflows with the Orchestrate SDK, run tasks in isolated environments with the Sandbox SDK, and compose reliable agent systems for production use.
 
 Use it when you want your coding agent to build:
 - multi-agent applications
@@ -17,7 +17,7 @@ Use it when you want your coding agent to build:
 
 It guides agents to:
 
-- use the **Applications SDK** for orchestration, workflow logic, and multi-agent coordination
+- use the **Orchestrate SDK** for orchestration, workflow logic, and multi-agent coordination
 - use the **Sandbox SDK** for isolated code execution and real agent workspaces
 - combine both SDKs to build production-style agent systems
 - choose TensorLake patterns that are better than a single-agent or stateless approach
@@ -67,7 +67,7 @@ tensorlake-skills/
 ├── SKILL.md              # Skill definition (Claude Code, Google ADK)
 ├── AGENTS.md             # Skill definition (OpenAI Codex)
 └── references/
-    ├── applications_sdk.md   # Applications API reference
+    ├── applications_sdk.md   # Orchestrate API reference
     ├── sandbox_sdk.md        # Sandbox API reference
     ├── documentai_sdk.md     # DocumentAI API reference
     └── integrations.md       # Integration patterns (LangChain, CrewAI, etc.)
