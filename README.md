@@ -58,13 +58,7 @@ Works with Claude Code, Cursor, Cline, GitHub Copilot, Windsurf, and more via [s
 
 ## Setup
 
-TensorLake requires an API key. Get one at [console.tensorlake.ai](https://console.tensorlake.ai), then set it as an environment variable:
-
-```bash
-export TENSORLAKE_API_KEY="your-api-key-here"
-```
-
-Or run `tensorlake login` to authenticate interactively.
+TensorLake requires a `TENSORLAKE_API_KEY` configured in the local environment. Get one at [console.tensorlake.ai](https://console.tensorlake.ai), then either run `tensorlake login` or configure the variable through your shell profile, `.env` file, or secret manager. Do not paste API keys into chat, commit them to source control, or print them in terminal output.
 
 ## Repository Structure
 
