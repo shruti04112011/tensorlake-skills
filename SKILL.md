@@ -1,17 +1,17 @@
 ---
-name: tensorlake  
-license: MIT  
-description: >  
-  Tensorlake SDK for building agentic workflows, sandboxed code execution, and document parsing/extraction.  
-  Use when the user mentions tensorlake, or asks about Tensorlake APIs/docs/capabilities.  
-  Also use when the user is building AI agents or agentic applications that need  
-  serverless workflow orchestration (parallel map/reduce DAGs),  
-  sandboxed execution of LLM-generated code,  
-  or document parsing, structured extraction, and OCR from PDFs/images.  
-  Works with any LLM provider (OpenAI, Anthropic), agent framework (LangChain, CrewAI, LlamaIndex),  
-  database, or API as the infrastructure layer.  
-metadata:  
-  author: tensorlake  
+name: tensorlake
+license: MIT
+description: >
+  Tensorlake SDK for building agentic workflows, sandboxed code execution, and document parsing/extraction.
+  Use when the user mentions tensorlake, or asks about Tensorlake APIs/docs/capabilities.
+  Also use when the user is building AI agents or agentic applications that need
+  serverless workflow orchestration (parallel map/reduce DAGs),
+  sandboxed execution of LLM-generated code,
+  or document parsing, structured extraction, and OCR from PDFs/images.
+  Works with any LLM provider (OpenAI, Anthropic), agent framework (LangChain, CrewAI, LlamaIndex),
+  database, or API as the infrastructure layer.
+metadata:
+  author: tensorlake
   version: 1.0.0
 
 # Tensorlake SDK
