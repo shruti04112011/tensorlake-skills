@@ -32,6 +32,7 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SKILL_FILE="$REPO_ROOT/SKILL.md"
 AGENTS_FILE="$REPO_ROOT/AGENTS.md"
 CHANGELOG_FILE="$REPO_ROOT/CHANGELOG.md"
+PLUGIN_FILE="$REPO_ROOT/.claude-plugin/plugin.json"
 
 # ── Parse arguments ──────────────────────────────────────────────────────────
 
@@ -100,6 +101,13 @@ else
 fi
 echo "  Updated $AGENTS_FILE"
 
+# ── Update plugin.json ──────────────────────────────────────────────────────
+
+if [[ -f "$PLUGIN_FILE" ]]; then
+    sedi "s/\"version\": \"[0-9][0-9]*\.[0-9][0-9]*\.[0-9][0-9]*\"/\"version\": \"${NEW_VERSION}\"/" "$PLUGIN_FILE"
+    echo "  Updated $PLUGIN_FILE"
+fi
+
 # ── Stamp CHANGELOG.md ──────────────────────────────────────────────────────
 
 if grep -q '## \[Unreleased\]' "$CHANGELOG_FILE"; then
@@ -128,7 +136,7 @@ echo ""
 echo "Version $NEW_VERSION is ready."
 echo ""
 echo "To complete the release:"
-echo "  git add SKILL.md AGENTS.md CHANGELOG.md"
+echo "  git add SKILL.md AGENTS.md CHANGELOG.md .claude-plugin/plugin.json"
 echo "  git commit -m \"release: v${NEW_VERSION}\""
 echo "  git tag v${NEW_VERSION}"
 echo ""

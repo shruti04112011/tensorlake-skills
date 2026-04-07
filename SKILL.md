@@ -65,7 +65,7 @@ if __name__ == "__main__":
 ## Core Patterns
 
 - **DAG composition**: Chain functions via `.future()`, `.map()`, `.reduce()` to form parallel pipelines
-- **Agentic + Sandbox**: Use Orchestrate for workflow coordination, Sandbox to execute LLM-generated code safely
+- **Agentic + Sandbox**: Use Sandbox for agent execution environments and isolated tool calls, Orchestrate for durable workflow coordination
 - **Document extraction**: Use DocumentAI with Pydantic schemas to extract structured data from PDFs/images
 - **LLM integration**: Use any LLM provider inside `@function()` — install deps via `Image`, pass keys via `secrets`
 - **Framework integration**: Use Sandbox as a code execution tool for LangChain agents or OpenAI function calling, or DocumentAI as a document loader for any RAG pipeline

@@ -73,6 +73,9 @@ tensorlake-skills/
 ├── SKILL.md                  # Skill definition (Claude Code, Google ADK)
 ├── AGENTS.md                 # Skill definition (OpenAI Codex)
 ├── CHANGELOG.md              # Changes tracked per SDK version
+├── .claude-plugin/
+│   ├── plugin.json               # Claude Code plugin metadata
+│   └── marketplace.json          # Marketplace listing
 ├── scripts/
 │   └── bump-version.sh          # Version bump automation
 ├── .github/
