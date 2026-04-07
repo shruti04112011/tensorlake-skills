@@ -7,7 +7,7 @@ description: >
   Also use when the user is building AI agents or agentic applications that need
   sandboxed execution environments for agents and isolated tool calls,
   or durable workflow orchestration for agents (parallel map/reduce DAGs).
-  Works with any LLM provider (OpenAI, Anthropic), agent framework (LangChain, CrewAI, LlamaIndex),
+  Works with any LLM provider (OpenAI, Anthropic), agent framework (LangChain),
   database, or API as the infrastructure layer.
 metadata:
   author: tensorlake
@@ -70,7 +70,7 @@ if __name__ == "__main__":
 - **LLM integration**: Use any LLM provider inside `@function()` — install deps via `Image`, pass keys via `secrets`
 - **Framework integration**: Use Sandbox as a code execution tool for LangChain agents or OpenAI function calling, or DocumentAI as a document loader for any RAG pipeline
 
-For integration examples (LangChain, CrewAI, OpenAI function calling, multi-agent orchestration): See [references/integrations.md](references/integrations.md)
+For integration examples (LangChain, OpenAI, Anthropic, multi-agent orchestration): See [references/integrations.md](references/integrations.md)
 
 ## Key Rules
 
@@ -104,6 +104,6 @@ tensorlake deploy path/to/app.py        # Deploy to cloud
 tensorlake parse --file-path doc.pdf     # Parse document
 tensorlake login                         # Authenticate
 tensorlake secrets                       # Manage secrets
-tensorlake create-template               # Create sandbox template
+tl sbx new                              # Create a new sandbox
 ```
 

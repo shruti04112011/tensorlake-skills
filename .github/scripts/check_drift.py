@@ -66,7 +66,7 @@ NOISE = frozenset({
     "count", "size", "time", "task", "step", "info", "note", "tip",
     "image", "base", "default", "config", "option", "args", "kwargs",
     # Third-party names that leak from tutorial examples
-    "openai", "anthropic", "langchain", "crewai", "llamaindex",
+    "openai", "anthropic", "langchain",
     "pydantic", "basemodel", "field", "fastapi", "flask", "django",
     "pandas", "numpy", "torch", "chromadb", "qdrant", "redis",
     "duckdb", "databricks", "spark", "mongodb",

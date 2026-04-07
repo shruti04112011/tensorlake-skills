@@ -21,4 +21,4 @@ All notable changes to the TensorLake skill are documented here.
 - **sandbox_sdk.md** — SandboxClient lifecycle, commands, file ops, snapshots, processes, networking, images
 - **applications_sdk.md** — decorators, futures, map-reduce, async, durability, crash recovery, retries, secrets, timeouts, scaling, observability, cron, parallel sub-agents
 - **documentai_sdk.md** — DocumentAI client, parsing options, structured extraction, page classification, edit, DOCX, charts, key-value, tables, signatures, barcodes, summarization, datasets
-- **integrations.md** — LangChain, OpenAI, Anthropic, CrewAI, LlamaIndex, ChromaDB, Qdrant, Databricks, MotherDuck patterns
+- **integrations.md** — LangChain, OpenAI, Anthropic, ChromaDB, Qdrant, Databricks, MotherDuck patterns

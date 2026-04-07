@@ -89,6 +89,6 @@ tensorlake deploy path/to/app.py        # Deploy to cloud
 tensorlake parse --file-path doc.pdf     # Parse document
 tensorlake login                         # Authenticate
 tensorlake secrets                       # Manage secrets
-tensorlake create-template               # Create sandbox template
+tl sbx new                              # Create a new sandbox
 ```
 
