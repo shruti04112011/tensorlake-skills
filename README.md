@@ -70,13 +70,24 @@ Tensorlake requires a `TENSORLAKE_API_KEY` configured in the local environment. 
 
 ```
 tensorlake-skills/
-├── SKILL.md              # Skill definition (Claude Code, Google ADK)
-├── AGENTS.md             # Skill definition (OpenAI Codex)
+├── SKILL.md                  # Skill definition (Claude Code, Google ADK)
+├── AGENTS.md                 # Skill definition (OpenAI Codex)
+├── CHANGELOG.md              # Changes tracked per SDK version
+├── .github/
+│   ├── workflows/
+│   │   └── sync-check.yml        # Weekly drift detection (CI)
+│   └── scripts/
+│       ├── fetch_docs.py         # Fetch live doc pages
+│       ├── check_drift.py        # Compare fetched vs bundled
+│       └── sources.yaml          # Map: reference file → source URLs
 └── references/
-    ├── applications_sdk.md   # Orchestrate API reference
-    ├── sandbox_sdk.md        # Sandbox API reference
-    ├── documentai_sdk.md     # DocumentAI API reference
-    └── integrations.md       # Integration patterns (LangChain, CrewAI, etc.)
+    ├── applications_sdk.md       # Orchestrate API reference
+    ├── sandbox_sdk.md            # Sandbox API reference
+    ├── documentai_sdk.md         # DocumentAI API reference
+    ├── integrations.md           # Integration patterns (LangChain, CrewAI, etc.)
+    ├── platform.md               # Webhooks, auth, access control, EU data residency
+    ├── sandbox_advanced.md       # Skills-in-sandboxes, AI code execution, data analysis, CI/CD
+    └── troubleshooting.md        # Common issues, production integration, benchmarks
 ```
 
 ## Documentation
