@@ -162,6 +162,52 @@ result = doc_ai.wait_for_completion(edit_id)
 
 Note: `edit()` does NOT have a `page_range` parameter.
 
+## DOCX Tracked Changes & Comments
+
+When parsing DOCX files containing Microsoft Word revision history, TensorLake preserves collaboration metadata in the output markup.
+
+### Tracked Changes Markup
+
+| Change Type | HTML Tag | Example |
+|-------------|----------|---------|
+| Insertions | `<ins>` | `<ins>added text</ins>` |
+| Deletions | `<del>` | `<del>removed text</del>` |
+
+### Comments Markup
+
+| Comment Type | Markup | Example |
+|-------------|--------|---------|
+| Text-anchored | `<span class="comment" data-note="...">` | `<span class="comment" data-note="Review this">highlighted text</span>` |
+| Cursor-position | `<!-- Comment: ... -->` | `<!-- Comment: Need to verify this -->` |
+
+### Extracting Changes Programmatically
+
+```python
+from bs4 import BeautifulSoup
+
+result = doc_ai.parse_and_wait(file="contract_with_edits.docx")
+
+for page in result.pages:
+    for fragment in page.page_fragments:
+        soup = BeautifulSoup(fragment.content.content, "html.parser")
+
+        # Find all insertions
+        for ins in soup.find_all("ins"):
+            print(f"Added: {ins.get_text(strip=True)}")
+
+        # Find all deletions
+        for del_tag in soup.find_all("del"):
+            print(f"Removed: {del_tag.get_text(strip=True)}")
+
+        # Find all comments
+        for span in soup.find_all("span", class_="comment"):
+            text = span.get_text(strip=True)
+            note = span.get("data-note", "")
+            print(f"Comment on '{text}': {note}")
+```
+
+**Important:** Tracked changes are only preserved when parsing DOCX files that contain Word's revision history. No special `ParsingOptions` flags are needed — change tracking is automatic for DOCX files with revisions.
+
 ## Datasets
 
 ```python
