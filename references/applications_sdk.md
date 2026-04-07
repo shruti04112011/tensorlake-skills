@@ -1,3 +1,29 @@
+<!--
+Source:
+  - https://docs.tensorlake.ai/applications/introduction.md
+  - https://docs.tensorlake.ai/applications/concepts.md
+  - https://docs.tensorlake.ai/applications/building-workflows.md
+  - https://docs.tensorlake.ai/applications/futures.md
+  - https://docs.tensorlake.ai/applications/map-reduce.md
+  - https://docs.tensorlake.ai/applications/async-functions.md
+  - https://docs.tensorlake.ai/applications/images.md
+  - https://docs.tensorlake.ai/applications/durability.md
+  - https://docs.tensorlake.ai/applications/crash-recovery.md
+  - https://docs.tensorlake.ai/applications/retries.md
+  - https://docs.tensorlake.ai/applications/secrets.md
+  - https://docs.tensorlake.ai/applications/timeouts.md
+  - https://docs.tensorlake.ai/applications/scale-out-queuing.md
+  - https://docs.tensorlake.ai/applications/scaling-agents.md
+  - https://docs.tensorlake.ai/applications/observability.md
+  - https://docs.tensorlake.ai/applications/cron-scheduler.md
+  - https://docs.tensorlake.ai/applications/parallel-sub-agents.md
+  - https://docs.tensorlake.ai/applications/sandboxes.md
+  - https://docs.tensorlake.ai/applications/guides/streaming-progress.md
+  - https://docs.tensorlake.ai/applications/guides/logging.md
+SDK version: tensorlake 0.4.39
+Last verified: 2026-04-07
+-->
+
 # TensorLake Applications SDK Reference
 
 ## Imports

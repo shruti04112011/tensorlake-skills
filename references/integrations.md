@@ -1,3 +1,15 @@
+<!--
+Source:
+  - https://docs.tensorlake.ai/integrations/overview.md
+  - https://docs.tensorlake.ai/integrations/langchain.md
+  - https://docs.tensorlake.ai/integrations/chroma.md
+  - https://docs.tensorlake.ai/integrations/qdrant.md
+  - https://docs.tensorlake.ai/integrations/databricks.md
+  - https://docs.tensorlake.ai/integrations/motherduck.md
+SDK version: tensorlake 0.4.39
+Last verified: 2026-04-07
+-->
+
 # TensorLake Integration Patterns
 
 Integration examples for using TensorLake as infrastructure alongside LLM providers, agent frameworks, and data platforms.

@@ -1,3 +1,26 @@
+<!--
+Source:
+  - https://docs.tensorlake.ai/document-ingestion/overview.md
+  - https://docs.tensorlake.ai/document-ingestion/quickstart.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/read.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/structured-extraction.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/page-classification.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/edit.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/parse-output.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/docx-parsing.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/chart-extraction.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/key-value-extraction.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/header-correction.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/table-merging.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/signature.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/barcode.md
+  - https://docs.tensorlake.ai/document-ingestion/parsing/summarization.md
+  - https://docs.tensorlake.ai/document-ingestion/datasets/create.md
+  - https://docs.tensorlake.ai/document-ingestion/datasets/data.md
+SDK version: tensorlake 0.4.39
+Last verified: 2026-04-07
+-->
+
 # TensorLake DocumentAI SDK Reference
 
 ## Imports

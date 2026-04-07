@@ -1,3 +1,17 @@
+<!--
+Source:
+  - https://docs.tensorlake.ai/sandboxes/introduction.md
+  - https://docs.tensorlake.ai/sandboxes/lifecycle.md
+  - https://docs.tensorlake.ai/sandboxes/commands.md
+  - https://docs.tensorlake.ai/sandboxes/file-operations.md
+  - https://docs.tensorlake.ai/sandboxes/snapshots.md
+  - https://docs.tensorlake.ai/sandboxes/processes.md
+  - https://docs.tensorlake.ai/sandboxes/networking.md
+  - https://docs.tensorlake.ai/sandboxes/images.md
+SDK version: tensorlake 0.4.39
+Last verified: 2026-04-07
+-->
+
 # TensorLake Sandbox SDK Reference
 
 ## Imports
