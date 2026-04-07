@@ -42,6 +42,10 @@ shift || true
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --sdk)
+            if [[ $# -lt 2 ]]; then
+                echo "Error: --sdk requires a version argument" >&2
+                exit 1
+            fi
             SDK_VERSION="$2"
             shift 2
             ;;

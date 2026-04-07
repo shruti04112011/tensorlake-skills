@@ -179,11 +179,14 @@ doc_ai = DocumentAI(api_key="YOUR_API_KEY", region=Region.EU)
 ```
 
 ```python
-from tensorlake.functions_sdk import Graph
+from tensorlake.applications import application, function
 from tensorlake.documentai import Region
 
-# Applications / Workflows
-graph = Graph(name="my_graph", region=Region.EU)
+# Applications / Workflows — pass region to @application()
+@application(region="eu-west-1")
+@function()
+def my_workflow(data: str) -> str:
+    ...
 ```
 
 **Key points:**
