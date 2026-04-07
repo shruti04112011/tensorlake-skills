@@ -19,6 +19,15 @@
 
 set -euo pipefail
 
+# Portable in-place sed (macOS uses BSD sed, Linux uses GNU sed)
+sedi() {
+    if sed --version >/dev/null 2>&1; then
+        sed -i "$@"        # GNU sed
+    else
+        sed -i '' "$@"     # BSD sed (macOS)
+    fi
+}
+
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SKILL_FILE="$REPO_ROOT/SKILL.md"
 AGENTS_FILE="$REPO_ROOT/AGENTS.md"
@@ -74,16 +83,16 @@ echo "Bumping: $CURRENT_VERSION -> $NEW_VERSION ($BUMP_TYPE)"
 
 # ── Update SKILL.md ──────────────────────────────────────────────────────────
 
-sed -i '' "s/version: ${CURRENT_VERSION}/version: ${NEW_VERSION}/" "$SKILL_FILE"
+sedi "s/version: ${CURRENT_VERSION}/version: ${NEW_VERSION}/" "$SKILL_FILE"
 echo "  Updated $SKILL_FILE"
 
 # ── Update AGENTS.md ─────────────────────────────────────────────────────────
 
 if grep -q "<!-- version:" "$AGENTS_FILE" 2>/dev/null; then
-    sed -i '' "s/<!-- version: .* -->/<!-- version: ${NEW_VERSION} -->/" "$AGENTS_FILE"
+    sedi "s/<!-- version: .* -->/<!-- version: ${NEW_VERSION} -->/" "$AGENTS_FILE"
 else
     # Insert version comment after the first heading
-    sed -i '' "1 s/^# Tensorlake SDK$/# Tensorlake SDK\n<!-- version: ${NEW_VERSION} -->/" "$AGENTS_FILE"
+    sedi "1 s/^# Tensorlake SDK$/# Tensorlake SDK\n<!-- version: ${NEW_VERSION} -->/" "$AGENTS_FILE"
 fi
 echo "  Updated $AGENTS_FILE"
 
@@ -103,7 +112,7 @@ if grep -q '## \[Unreleased\]' "$CHANGELOG_FILE"; then
         fi
     fi
 
-    sed -i '' "s/## \[Unreleased\].*/$(echo "$HEADER" | sed 's/[&/\]/\\&/g')/" "$CHANGELOG_FILE"
+    sedi "s/## \[Unreleased\].*/$(echo "$HEADER" | sed 's/[&/\]/\\&/g')/" "$CHANGELOG_FILE"
     echo "  Stamped $CHANGELOG_FILE"
 else
     echo "  Warning: No [Unreleased] section found in $CHANGELOG_FILE"

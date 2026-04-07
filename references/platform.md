@@ -180,6 +180,7 @@ doc_ai = DocumentAI(api_key="YOUR_API_KEY", region=Region.EU)
 
 ```python
 from tensorlake.functions_sdk import Graph
+from tensorlake.documentai import Region
 
 # Applications / Workflows
 graph = Graph(name="my_graph", region=Region.EU)

@@ -160,6 +160,15 @@ def tracked_urls(sources: dict) -> set[str]:
 
 # URL path prefix → suggested reference file (or "NEW: <name>" for new files).
 _ROUTE_RULES: list[tuple[str, str]] = [
+    # Specific rules must come before generic prefix matches
+    ("/sandboxes/skills-in-sandboxes", "sandbox_advanced.md"),
+    ("/sandboxes/ai-code-execution", "sandbox_advanced.md"),
+    ("/sandboxes/data-analysis", "sandbox_advanced.md"),
+    ("/sandboxes/cicd-build", "sandbox_advanced.md"),
+    ("/applications/production/", "troubleshooting.md"),
+    ("/document-ingestion/production/", "troubleshooting.md"),
+    ("/applications/overview", "troubleshooting.md"),
+    # Generic prefix rules
     ("/sandboxes/", "sandbox_sdk.md"),
     ("/api-reference/v2/sandboxes/", "sandbox_sdk.md"),
     ("/api-reference/v2/processes/", "sandbox_sdk.md"),

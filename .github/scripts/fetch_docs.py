@@ -107,7 +107,7 @@ def main() -> int:
     )
 
     print(f"\nDone: {total - failed}/{total} pages fetched, {failed} failures.")
-    return 1 if failed > total // 2 else 0  # Fail only if majority of fetches failed
+    return 1 if failed > 0 else 0  # Fail on any fetch failure to avoid false drift reports
 
 
 if __name__ == "__main__":

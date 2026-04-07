@@ -93,7 +93,7 @@ Use sandboxes as LLM tool-call targets for safe code execution.
 3. Close when done
 
 ```python
-sandbox = tl_client.create_and_connect(
+sandbox = client.create_and_connect(
     cpus=1.0,
     memory_mb=1024,
     timeout_secs=600,
@@ -107,8 +107,8 @@ result = sandbox.run("python", ["-c", code])
 ### Snapshots for Pre-installed Dependencies
 
 ```python
-snapshot = tl_client.snapshot_and_wait(sandbox.sandbox_id)
-sandbox = tl_client.create_and_connect(snapshot_id=snapshot.snapshot_id)
+snapshot = client.snapshot_and_wait(sandbox.sandbox_id)
+sandbox = client.create_and_connect(snapshot_id=snapshot.snapshot_id)
 ```
 
 ### Integration Patterns
