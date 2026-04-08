@@ -1,0 +1,15 @@
+CustomerID,Product,Category,Amount,Date
+101,Laptop,Electronics,55000,2024-01-10
+102,Phone,Electronics,20000,2024-01-11
+103,Shoes,Fashion,3000,2024-01-12
+101,Mouse,Electronics,500,2024-01-13
+104,T-shirt,Fashion,800,2024-01-14
+105,Watch,Accessories,2500,2024-01-15
+
+CustomerID,Product,Category,Amount,Date
+101,Laptop,Electronics,55000,2024-01-10
+102,Phone,Electronics,20000,2024-01-11
+103,Shoes,Fashion,3000,2024-01-12
+101,Mouse,Electronics,500,2024-01-13
+104,T-shirt,Fashion,800,2024-01-14
+105,Watch,Accessories,2500,2024-01-15
